@@ -23,8 +23,7 @@ RUN unzip data.zip
 RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/windowmasker_files/9606/wmasker.obinary                             
 ## Download the GRCh37 human reference and create the blast, and gunzip.                                      
 COPY hs37d5.fa .                                                                                              
-COPY hs37d5.fa.fai .  
-COPY hs37d5.fa.fai .                                                                                          
+COPY hs37d5.fa.fai .                                                                                     
 RUN ls -ltra                                                                                                  
 RUN makeblastdb -in hs37d5.fa -dbtype nucl                                                                    
 RUN makeblastdb -in repeats.fasta -dbtype nucl                                                                
