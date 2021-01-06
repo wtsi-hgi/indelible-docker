@@ -30,7 +30,7 @@ RUN makeblastdb -in repeats.fasta -dbtype nucl
                                                                                                               
 # add config and set final WORKDIR                                                                            
 WORKDIR /usr/src/app/Indelible                                                                                
-RUN mv example_config.yml config.yml                                                                          
+RUN mv example_config.hg19.yml config.yml                                                                          
                                                                                                               
 ENV PATH="/usr/src/app/Indelible:${PATH}"                                                                     
 CMD [ "python", "./indelible.py" ]                                                                            
