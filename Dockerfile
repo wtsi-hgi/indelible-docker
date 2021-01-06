@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \                                                                                       
     apt-get -y install gcc libz-dev g++ unzip gzip                                                            
                                                                                                               
-# install dependencies blast bedtools tabix and bgzip                                                         
+# install dependencies: blast bedtools tabix and bgzip                                                         
 RUN conda install -c bioconda blast bedtools tabix -y                                                         
                                                                                                               
 # install repo and pip requirements                                                                           
