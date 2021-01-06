@@ -18,7 +18,7 @@ RUN pip install -r requirements.txt
                                                                                                               
 # Unzip required data files                                                                                   
 WORKDIR /usr/src/app/Indelible/data/                                                                          
-RUN unzip data.zip                                                                                            
+RUN unzip data_hg19.zip                                                                                           
 ## Download windowmasker:                                                                                     
 RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/windowmasker_files/9606/wmasker.obinary                             
 ## Download the GRCh37 human reference and create the blast, and gunzip.                                      
