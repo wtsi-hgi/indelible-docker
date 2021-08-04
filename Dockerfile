@@ -13,7 +13,7 @@ RUN apt-get update && \
 # install dependencies: blast bedtools tabix and bgzip                                                         
 RUN conda update conda
 RUN conda update --all
-RUN conda install -c bioconda htslib blast bedtools cython tabix pip -y
+RUN conda install --channel conda-forge -c bioconda htslib blast bedtools cython tabix -y
                                                                                                               
 # install repo and pip requirements                                                                           
 RUN git clone https://github.com/HurlesGroupSanger/indelible.git # used to be eugenegardner/Indelible.git
