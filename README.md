@@ -6,4 +6,4 @@ Images available in Dockerhub:
 https://hub.docker.com/repository/docker/mercury/indelible
 
 A singularity image can also be made by converting a dockerhub image:
-see `make_singularity_image.sh`
+cf. `make_singularity_image.sh`
