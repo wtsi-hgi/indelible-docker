@@ -1,4 +1,4 @@
-# rm -f log && touch log && ./build_docker.sh >> log 2>&1 & tail -f log
+# rm -f log && nohup ./build_docker.sh > log 2>&1 & sleep 2 && tail -f log
 
 # image build instructions:
 
