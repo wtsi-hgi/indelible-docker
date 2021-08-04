@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 # install apt dependencies                                                                                    
 ENV DEBIAN_FRONTEND noninteractive                                                                            
 RUN apt-get update && \                                                                                       
-    apt-get -y install gcc libz-dev g++ unzip gzip bwa
+    apt-get -y install gcc libz-dev g++ unzip gzip bwa libcurl-dev
                                                                                                               
 # install dependencies: blast bedtools tabix and bgzip                                                         
 RUN conda update conda
