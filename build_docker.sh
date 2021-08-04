@@ -8,8 +8,10 @@
 
 COMMIT=$(git rev-parse --short HEAD)
 echo commit $COMMIT
-sudo docker build . -t mercury/indelible:$COMMIT
-echo built docker image mercury/indelible:$COMMIT
+REPO_TAG="mercury/indelible:hg19_$COMMIT"
+echo repo tag 
+sudo docker build . -t $REPO_TAG
+echo built docker image $REPO_TAG
 
 
 # image build instructions                                                                                    
