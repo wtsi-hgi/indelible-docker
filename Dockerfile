@@ -14,16 +14,11 @@ RUN apt-get update && \
 # install repo and pip requirements                                                                           
 RUN git clone https://github.com/HurlesGroupSanger/indelible.git # used to be eugenegardner/Indelible.git
 WORKDIR /usr/src/app/indelible                                                                                
-RUN which python
-RUN which pip
 RUN pip install numpy Cython
 RUN pip install -r requirements.txt                                                                           
                                                                                                               
-# install dependencies: blast bedtools tabix and bgzip                                                         
-RUN conda update conda
-RUN conda update --all
-RUN conda install --channel conda-forge -c bioconda htslib blast bedtools cython tabix -y
-                                                                                                              
+# install other dependencies: blast bedtools tabix and bgzip                                                         
+RUN conda install -c bioconda htslib bedtools cython tabix -y
                                                                                                               
 # Unzip required data files                                                                                   
 WORKDIR /usr/src/app/indelible/data/                                                                          
