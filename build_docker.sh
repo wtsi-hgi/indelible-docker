@@ -1,4 +1,4 @@
-# image build instructions
+# image build instructions:
 
 # first get required files with:
 # wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz
