@@ -13,7 +13,7 @@ RUN apt-get update && \
 RUN conda update conda
 RUN conda update --all
 RUN conda install -c bioconda blast bedtools cython tabix pip -y
-RUN conda install -c msys2 m2-liblzma
+RUN conda install -c anaconda xz -y
                                                                                                               
 # install repo and pip requirements                                                                           
 RUN git clone https://github.com/HurlesGroupSanger/indelible.git # used to be eugenegardner/Indelible.git
