@@ -13,8 +13,11 @@ echo repo tag $REPO_TAG
 sudo docker build . -t $REPO_TAG
 echo built docker image $REPO_TAG
 
+docker login --username mercury
+docker push $REPO_TAG
 
-# image build instructions                                                                                    
+
+# old image build instructions:
 # wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz
 # gunzip hs37d5.fa.gz                                                                                         
 # wget ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz.fai 
