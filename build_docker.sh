@@ -9,7 +9,7 @@
 COMMIT=$(git rev-parse --short HEAD)
 echo commit $COMMIT
 REPO_TAG="mercury/indelible:hg19_$COMMIT"
-echo repo tag 
+echo repo tag $REPO_TAG
 sudo docker build . -t $REPO_TAG
 echo built docker image $REPO_TAG
 
