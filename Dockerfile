@@ -16,7 +16,7 @@ RUN git clone https://github.com/HurlesGroupSanger/indelible.git # used to be eu
 WORKDIR /usr/src/app/indelible                                                                                
 RUN which python
 RUN which pip
-RUN pip install numpy
+RUN pip install numpy Cython
 RUN pip install -r requirements.txt                                                                           
                                                                                                               
 # install dependencies: blast bedtools tabix and bgzip                                                         
