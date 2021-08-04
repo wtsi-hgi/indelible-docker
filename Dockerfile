@@ -8,13 +8,15 @@ RUN apt-get update && \
     apt-get -y install gcc libz-dev g++ unzip gzip bwa
                                                                                                               
 # install dependencies: blast bedtools tabix and bgzip                                                         
-RUN conda install -c bioconda blast bedtools tabix -y                                                         
+RUN conda update conda
+RUN conda update --all
+RUN conda install -c bioconda blast bedtools cython tabix -y                                                         
                                                                                                               
 # install repo and pip requirements                                                                           
 RUN git clone https://github.com/HurlesGroupSanger/indelible.git # used to be eugenegardner/Indelible.git
 WORKDIR /usr/src/app/indelible                                                                                
-RUN pip install cython                                                                                        
-RUN pip install -c bioconda -r requirements.txt                                                                           
+RUN python -m pip install –upgrade pip
+RUN pip install -r requirements.txt                                                                           
                                                                                                               
 # Unzip required data files                                                                                   
 WORKDIR /usr/src/app/indelible/data/                                                                          
