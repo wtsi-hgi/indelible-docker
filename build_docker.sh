@@ -1,3 +1,5 @@
+# rm -f log && nohup ./build_docker.sh > log 2>&1 &
+
 # image build instructions:
 
 # first get required files with:
@@ -13,8 +15,8 @@ echo repo tag $REPO_TAG
 sudo docker build . -t $REPO_TAG
 echo built docker image $REPO_TAG
 
-docker login --username mercury
-docker push $REPO_TAG
+#docker login --username mercury
+#docker push $REPO_TAG
 
 
 # old image build instructions:
