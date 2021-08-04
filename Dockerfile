@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \                                                                                       
     apt-get -y install \
     gcc make libcurl4-gnutls-dev zlib1g-dev libncurses5-dev \
-    libncursesw5-dev liblzma-dev libz-dev g++ unzip gzip bwa libssl-dev libcurl4-openssl-dev libbz2-dev liblzma-dev -y
+    libncursesw5-dev liblzma-dev libz-dev g++ unzip gzip bwa libssl-dev libbz2-dev liblzma-dev -y
                                                                                                               
 # install dependencies: blast bedtools tabix and bgzip                                                         
 RUN conda update conda
