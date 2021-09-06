@@ -13,8 +13,8 @@ RUN apt-get update && \
 
 # install repo and pip requirements                                                                           
 RUN git clone https://github.com/HurlesGroupSanger/indelible.git # used to be eugenegardner/Indelible.git
-WORKDIR /usr/src/app/indelible                                                                                
-RUN pip install numpy Cython
+WORKDIR /usr/src/app/indelible  
+RUN pip install 'numpy==1.17.2' Cython
 RUN pip install -r requirements.txt                                                                           
                                                                                                               
 # install other dependencies: blast bedtools tabix and bgzip                                                         
